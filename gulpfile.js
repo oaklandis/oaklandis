@@ -10,11 +10,6 @@ var gulp = require('gulp'),
 
 var lr = liveReloadServer();
 
-gulp.task('normalize', function(){
-    gulp.src(['bower_components/normalize-css/normalize.css'])
-        .pipe(gulp.dest('build/css'));
-});
-
 gulp.task('scripts', function() {
     gulp.src(['src/coffee/**/*.coffee'])
         .pipe(coffee().on('error', function(err){
@@ -26,13 +21,11 @@ gulp.task('scripts', function() {
 
 gulp.task('styles', function() {
     gulp.src(['src/sass/**/*.scss'])
-        .pipe(sass().on('error', function(err){
-            gutil.log(gutil.colors.red('Error in SASS syntax'));
+        .pipe(sass({errLogToConsole: true}).on('error', function(err){
+            gutil.log(gutil.colors.red('Error in SASS syntax'), err);
         }))
         .pipe(gulp.dest('build/css'))
         .pipe(livereload(lr));
-
-    gulp.start('normalize');
 });
 
 function startExpress() {

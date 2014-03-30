@@ -15,13 +15,12 @@
   },
   "devDependencies": {
     "gulp": "~3.5.1",
-    "gulp-sass": "~0.2.3",
-    "gulp-coffee": "~1.2.5",
-    "gulp-jade": "~0.3.0",
     "gulp-util": "~2.2.6",
     "connect-livereload": "~0.3.2",
     "tiny-lr": "0.0.5",
     "express": "~3.5.1",
-    "gulp-livereload": "~1.2.0"
+    "gulp-livereload": "~1.2.0",
+    "gulp-coffee": "~1.4.1",
+    "gulp-sass": "~0.7.1"
   }
 }

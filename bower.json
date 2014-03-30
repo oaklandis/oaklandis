@@ -1,10 +1,10 @@
 {
-  "name": "gulp-static-boilerplate",
-  "version": "0.0.0",
+  "name": "Oakland.is",
+  "version": "0.0.1",
   "authors": [
-    "Charlton Roberts <charltonroberts@gmail.com>"
+    "Jesse Pollak <jesse@getclef.com>"
   ],
-  "main": "build/index.html",
+  "main": "index.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -13,7 +13,8 @@
     "test",
     "tests"
   ],
+  "directory": "src/",
   "dependencies": {
-    "normalize-css": "~2.1.3"
+    "foundation": "~5.2.1"
   }
 }
