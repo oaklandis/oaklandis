@@ -1,2 +1,6 @@
 $ ->
-    console.log 'app init'
+    $(document).foundation()
+    $(document).ready ->
+        $('.join-click').click (e) ->
+            e.preventDefault()
+            $('.join').slideDown()

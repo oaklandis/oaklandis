@@ -6108,45 +6108,71 @@ html, body {
 
 .header {
   padding: 10px;
-  background: #444; }
+  background: #5C962F; }
   .header h1 {
     font-weight: 700;
     font-size: 5.9375rem;
     color: #fff; }
   .header .underline {
-    width: 100%;
+    width: 97%;
+    margin-right: 3%;
     height: 5px;
     margin-top: 97px;
     background: #fff; }
 
 .sub-header {
-  background: #bbb;
+  background: #fff;
   padding: 10px; }
   .sub-header h2 {
-    color: #fff;
+    color: #5C962F;
     font-size: 1.6875rem; }
+    .sub-header h2 a {
+      color: #76bd3b; }
+      .sub-header h2 a:hover {
+        color: #90cd5e; }
 
-.content ul.companies {
-  margin: 50px 0;
-  list-style: none; }
-  .content ul.companies li {
-    font-size: 40px;
-    position: relative; }
-    .content ul.companies li:before {
-      content: " ";
-      display: block;
-      background: #aaaaaa;
-      height: 13.33333px;
-      width: 13.33333px;
-      border-radius: 13.33333px;
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      margin-top: -6.66667px; }
-    .content ul.companies li a {
-      display: block;
-      padding: 20px 40px;
-      color: #777;
-      font-weight: bold; }
-      .content ul.companies li a:hover {
-        background: #eee; }
+#join p.lead {
+  margin-bottom: 5px; }
+
+.content {
+  background: #fff; }
+  .content ul.companies {
+    margin: 30px 0;
+    list-style: none; }
+    .content ul.companies li {
+      font-size: 20px;
+      position: relative; }
+      .content ul.companies li a {
+        display: block;
+        padding: 10px 30px;
+        color: #555;
+        font-weight: bold;
+        position: relative; }
+        .content ul.companies li a:hover {
+          background: #bbbbbb; }
+          .content ul.companies li a:hover:after {
+            opacity: 1; }
+          .content ul.companies li a:hover:before {
+            background: #fff; }
+        .content ul.companies li a:before {
+          content: " ";
+          display: block;
+          background: #bbbbbb;
+          height: 6.66667px;
+          width: 6.66667px;
+          border-radius: 6.66667px;
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          margin-top: -3.33333px; }
+        .content ul.companies li a:after {
+          opacity: 0;
+          content: attr(href);
+          display: block;
+          position: absolute;
+          height: 24px;
+          line-height: 20px;
+          right: 10px;
+          top: 50%;
+          margin-top: -10px;
+          color: white; }

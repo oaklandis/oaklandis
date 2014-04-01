@@ -4,14 +4,22 @@
   <title>Oakland.is</title>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="build/css/style.css">
+  <link rel="icon" href="build/img/favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <div class="header">
+    <div class="row">
+      <div class="large-6 columns large-centered">
+        <img src="build/img/oakland.png" alt="Oakland">
+      </div>
+    </div>
     <div class="row collapse">
+      <div class="row">
+      </div>
       <div class="large-6 columns">
         <h1>Oakland is</h1>
       </div>
-      <div class="large-6 columns">
+      <div class="large-6 columns show-for-medium-up">
         <div class="underline"></div> 
       </div>
     </div>
@@ -19,18 +27,27 @@
   <div class="sub-header">
     <div class="row">
       <div class="large-12 columns">
-        <h2>A community of internet startups made in Oakland, CA.</h2>  
+        <h2>A community of internet startups made in Oakland, CA. <a href="#" class="join-click" data-reveal-id="join" data-reveal>Want to join?</a></h2>  
       </div> 
     </div>
-  </div>
-  <div class="content row">
-    <div class="large-12 columns">
-      <ul class="companies">
-        <li><a href="http://getclef.com">Clef</a></li>
-        <li><a href="http://theshoppad.com">ShopPad</a></li>
-        <li><a href="http://pandora.com">Pandora</a></li>
-      </ul>
+  </div>  <div class="content">
+    <div class="row collapse">
+      <div class="large-12 columns">
+        <ul class="companies">
+          <li><a target="_blank" href="http://getclef.com">Clef</a></li>
+          <li><a target="_blank" href="http://theshoppad.com">ShopPad</a></li>
+          <li><a target="_blank" href="http://pandora.com">Pandora</a></li>
+        </ul>
+      </div>
     </div>
   </div>
+  <div id="join" class="reveal-modal small" data-reveal>
+    <p class="lead">Email <a href="mailto:list@oakland.is">list@oakland.is</a> and we'll get you all set up.</p>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <p class="text-center">made with love in oakland.</p>
+  <script src="src/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="src/bower_components/foundation/js/foundation.min.js"></script>
+  <script src="build/js/app.js" type="text/javascript"></script>
 </body>
 </html>

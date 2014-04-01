@@ -3,10 +3,13 @@
 @import "../bower_components/foundation/scss/foundation";
 
 $padding: 10px;
-$header-bg-color: #444;
+$header-bg-color: #5C962F;
 $header-color: #fff;
-$subheader-bg-color: #bbb;
-$subheader-color: #fff;
+$subheader-bg-color: #fff;
+$subheader-color: $header-bg-color;
+$content-bg-color: #fff;
+$company-color: #555;
+$company-size: 20px;
 
 html, body {
     width: 100%;
@@ -23,7 +26,8 @@ html, body {
     }
 
     .underline {
-        width: 100%;
+        width: 97%;
+        margin-right: 3%;
         height: 5px;
         margin-top: 97px;
         background: $header-color;
@@ -36,38 +40,69 @@ html, body {
     h2 {
         color: $subheader-color;
         font-size: $h3-font-size;
+        a {
+            color: lighten($subheader-color, 10%);
+            &:hover {
+                color: lighten($subheader-color, 20%);
+            }
+        }
+    }
+}
+
+#join {
+    p.lead {
+        margin-bottom: 5px;
     }
 }
 
 .content {
-    $company-color: #777;
-    $company-size: 40px;
+    background: $content-bg-color;
     ul.companies {
-        margin: 50px 0;
+        margin: 30px 0;
         list-style: none;
         li {
             font-size: $company-size;
             position: relative;
-            &:before {
-                $size: $company-size / 3;
-                content: " ";
-                display: block;
-                background: lighten($company-color, 20%);
-                height: $size;
-                width: $size;
-                border-radius: $size;
-                position: absolute;
-                left: $padding;
-                top: 50%;
-                margin-top: -$size / 2;
-            }
             a {
                 display: block;
-                padding: $padding * 2 $padding * 4;
+                padding: $padding $padding * 3;
                 color: $company-color;
                 font-weight: bold;
+                position: relative;
                 &:hover {
-                    background: #eee;
+                    background: lighten($company-color, 40%);
+                    &:after {
+                        opacity: 1;
+                    }
+                    &:before {
+                        background: #fff;
+                    }
+                }
+                &:before {
+                    $size: $company-size / 3;
+                    content: " ";
+                    display: block;
+                    background: lighten($company-color, 40%);
+                    height: $size;
+                    width: $size;
+                    border-radius: $size;
+                    position: absolute;
+                    left: $padding;
+                    top: 50%;
+                    margin-top: -$size / 2;
+                }
+                &:after {
+                    opacity: 0;
+                    content: attr(href);
+                    display: block;
+                    position: absolute;
+                    height: 24px;
+                    line-height: 20px;
+                    right: 10px;
+                    top: 50%;
+                    margin-top: -10px;
+                    color: white;
+                    // font-weight: 500;
                 }
             }
         } 
