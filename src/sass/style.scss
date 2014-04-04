@@ -16,6 +16,7 @@ html, body {
     height: 100%;
 }
 
+
 .header {
     padding: $padding;
     background: $header-bg-color;
@@ -23,9 +24,11 @@ html, body {
         font-weight: 700;
         font-size: emCalc(95px);
         color: $header-color;
+        text-align: center;
     }
 
     .underline {
+        display: none;
         width: 97%;
         margin-right: 3%;
         height: 5px;
@@ -40,6 +43,7 @@ html, body {
     h2 {
         color: $subheader-color;
         font-size: $h3-font-size;
+        text-align: center;
         a {
             color: lighten($subheader-color, 10%);
             &:hover {
@@ -106,5 +110,30 @@ html, body {
                 }
             }
         } 
+    }
+}
+
+@media #{$small-only} {
+    .header {
+        h1 {
+            font-size: 70px;
+        }
+    }
+}
+
+@media #{$large-up} {
+    .header {
+        .underline {
+            display: block;
+        }
+        h1 {
+            text-align: left;
+        }
+    }
+
+    .sub-header {
+        h2 {
+            text-align: left;
+        }
     }
 }

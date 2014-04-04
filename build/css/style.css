@@ -6112,8 +6112,10 @@ html, body {
   .header h1 {
     font-weight: 700;
     font-size: 5.9375rem;
-    color: #fff; }
+    color: #fff;
+    text-align: center; }
   .header .underline {
+    display: none;
     width: 97%;
     margin-right: 3%;
     height: 5px;
@@ -6125,7 +6127,8 @@ html, body {
   padding: 10px; }
   .sub-header h2 {
     color: #5C962F;
-    font-size: 1.6875rem; }
+    font-size: 1.6875rem;
+    text-align: center; }
     .sub-header h2 a {
       color: #76bd3b; }
       .sub-header h2 a:hover {
@@ -6176,3 +6179,15 @@ html, body {
           top: 50%;
           margin-top: -10px;
           color: white; }
+
+@media only screen and (max-width: 40em) {
+  .header h1 {
+    font-size: 70px; } }
+
+@media only screen and (min-width:64.063em) {
+  .header .underline {
+    display: block; }
+  .header h1 {
+    text-align: left; }
+  .sub-header h2 {
+    text-align: left; } }

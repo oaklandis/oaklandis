@@ -34,35 +34,9 @@
     <div class="row collapse">
       <div class="large-12 columns">
         <ul class="companies">
-          
-            <li><a target="_blank" href="http://babyli.st">BabyList</a></li>
-          
-            <li><a target="_blank" href="http://mayvenn.com">Mayvenn</a></li>
-          
-            <li><a target="_blank" href="https://getclef.com">Clef</a></li>
-          
-            <li><a target="_blank" href="http://immunityproject.org">Immunity Project</a></li>
-          
-            <li><a target="_blank" href="http://kato.im">Kato</a></li>
-          
-            <li><a target="_blank" href="http://livescribe.com">Livescribe</a></li>
-          
-            <li><a target="_blank" href="http://joinmosaic.com">Mosaic</a></li>
-          
-            <li><a target="_blank" href="http://Sungevity">Sungevity</a></li>
-          
-            <li><a target="_blank" href="http://npmjs.com">NPM, inc.</a></li>
-          
-            <li><a target="_blank" href="http://pandora.com">Pandora</a></li>
-          
-            <li><a target="_blank" href="http://stayinyourprime.com">Prime</a></li>
-          
-            <li><a target="_blank" href="http://rockbot.com">Rockbot</a></li>
-          
-            <li><a target="_blank" href="http://theshoppad.com">ShopPad</a></li>
-          
-            <li><a target="_blank" href="http://buildingrobotics.com">Building Robotics</a></li>
-          
+          <% for (var i = 0; i < companies.length; i++ )  { %>
+            <li><a target="_blank" href="<%=companies[i].url%>"><%=companies[i].name%></a></li>
+          <% } %>
         </ul>
       </div>
     </div>
