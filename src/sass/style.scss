@@ -71,7 +71,7 @@ html, body {
                 display: block;
                 padding: $padding $padding * 3;
                 color: $company-color;
-                font-weight: bold;
+                // font-weight: bold;
                 position: relative;
                 &:hover {
                     background: lighten($company-color, 40%);
