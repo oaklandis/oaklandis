@@ -29,7 +29,12 @@ gulp.task('styles', function() {
 });
 
 gulp.task('html', function() {
-  var companies = require('./src/data/companies').sort(function(a, b) { a.name - b.name });
+  var companies = require('./src/data/companies').sort(function(a, b) { 
+    if (a.name > b.name) return 1;
+    if (a.name < b.name) return -1;
+    return 0;
+  });
+  
   return gulp.src(['src/html/index.html'])
     .pipe(ejs({companies: companies}))
     .pipe(gulp.dest('.'))

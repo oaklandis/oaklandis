@@ -53,6 +53,10 @@ exports = module.exports = [
     },
     {
         name: 'Sungevity',
-        url: 'http://Sungevity'
+        url: 'http://sungevity.com'
+    },
+    {
+        name: 'Josephine',
+        url: 'http://josephine.com'
     }
 ]
