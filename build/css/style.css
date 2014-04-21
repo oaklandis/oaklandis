@@ -6151,11 +6151,9 @@ html, body {
         color: #555;
         position: relative; }
         .content ul.companies li a:hover {
-          background: #bbbbbb; }
+          background: #e1e1e1; }
           .content ul.companies li a:hover:after {
             opacity: 1; }
-          .content ul.companies li a:hover:before {
-            background: #fff; }
         .content ul.companies li a:before {
           content: " ";
           display: block;
@@ -6178,6 +6176,17 @@ html, body {
           top: 50%;
           margin-top: -10px;
           color: white; }
+
+#join p.lead {
+  background: #eee;
+  padding: 10px;
+  margin-bottom: 20px; }
+#join p:not(.lead) {
+  margin-left: 5px; }
+#join ul {
+  margin-left: 30px; }
+#join a.close-reveal-modal {
+  font-size: 20px; }
 
 @media only screen and (max-width: 40em) {
   .header h1 {

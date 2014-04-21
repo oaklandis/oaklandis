@@ -74,12 +74,9 @@ html, body {
                 // font-weight: bold;
                 position: relative;
                 &:hover {
-                    background: lighten($company-color, 40%);
+                    background: lighten($company-color, 55%);
                     &:after {
                         opacity: 1;
-                    }
-                    &:before {
-                        background: #fff;
                     }
                 }
                 &:before {
@@ -110,6 +107,24 @@ html, body {
                 }
             }
         } 
+    }
+}
+
+#join {
+    p.lead {
+        background: #eee;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    p:not(.lead) {
+        margin-left: 5px;
+    }
+    ul {
+        margin-left: 30px;
+    }
+
+    a.close-reveal-modal {
+        font-size: 20px;
     }
 }
 

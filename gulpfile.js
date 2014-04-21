@@ -1,20 +1,34 @@
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
   coffee = require('gulp-coffee'),
+  coffeelint = require('gulp-coffeelint'),
   jade = require('gulp-jade'),
   liveReloadServer = require('tiny-lr'),
   livereload = require('gulp-livereload'),
   gutil = require('gulp-util'),
   ejs = require('gulp-ejs'),
+  gulpif = require('gulp-if'),
+  concat = require('gulp-concat'),
   express = require('express');
 
 var lr = liveReloadServer();
 
 gulp.task('scripts', function() {
-  return gulp.src(['src/coffee/**/*.coffee'])
-    .pipe(coffee().on('error', function(err){
-        gutil.log(gutil.colors.red(err))
-    }))
+  return gulp.src([
+      'src/bower_components/jquery/dist/jquery.min.js',
+      'src/bower_components/foundation/js/foundation.min.js',
+      'src/coffee/**/*.coffee'
+    ])
+    .pipe(gulpif(/[.]coffee$/, coffeelint({ 
+        "indentation": {
+            "name": "indentation",
+            "value": 4,
+            "level": "error"
+        }
+    })))
+    .pipe(gulpif(/[.]coffee$/, coffeelint.reporter()))
+    .pipe(gulpif(/[.]coffee$/, coffee({bare: true}).on('error', gutil.log)))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(livereload(lr));
 });
