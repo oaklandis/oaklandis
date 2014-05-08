@@ -61,5 +61,9 @@ exports = module.exports = [
     {
         name: 'deliberateLIFE',
         url: 'http://deliberatelifemag.com'
+    },
+    {
+        name: 'Oventio',
+        url: 'https://www.oventio.com/'
     }
 ]
