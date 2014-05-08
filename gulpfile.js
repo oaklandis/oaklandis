@@ -19,7 +19,7 @@ gulp.task('scripts', function() {
       'src/bower_components/foundation/js/foundation.min.js',
       'src/coffee/**/*.coffee'
     ])
-    .pipe(gulpif(/[.]coffee$/, coffeelint({ 
+    .pipe(gulpif(/[.]coffee$/, coffeelint({
         "indentation": {
             "name": "indentation",
             "value": 4,
@@ -43,12 +43,12 @@ gulp.task('styles', function() {
 });
 
 gulp.task('html', function() {
-  var companies = require('./src/data/companies').sort(function(a, b) { 
-    if (a.name > b.name) return 1;
-    if (a.name < b.name) return -1;
+  var companies = require('./src/data/companies').sort(function(a, b) {
+    if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
+    if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
     return 0;
   });
-  
+
   return gulp.src(['src/html/index.html'])
     .pipe(ejs({companies: companies}))
     .pipe(gulp.dest('.'))

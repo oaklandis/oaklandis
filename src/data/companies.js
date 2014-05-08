@@ -10,8 +10,7 @@ exports = module.exports = [
     {
         name: 'Clef',
         url: 'https://getclef.com'
-    },
-    {
+    },    {
         name: 'Immunity Project',
         url: 'http://immunityproject.org'
     },
@@ -58,5 +57,9 @@ exports = module.exports = [
     {
         name: 'Josephine',
         url: 'http://josephine.com'
+    },
+    {
+        name: 'deliberateLIFE',
+        url: 'http://deliberatelifemag.com'
     }
 ]
